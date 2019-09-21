@@ -14,6 +14,7 @@ class App extends Component {
     };
 
     this.mySelect2 = React.createRef();
+    //this.myChosen = React.createRef();
   };
 
 
@@ -35,10 +36,17 @@ class App extends Component {
   componentDidMount() {
     //$('.js-example-basic-single').select2({change:this.handleChange});
     //$('.js-example-basic-single').select2();
-
+    $(".chosen-select").chosen();
     $('.js-example-basic-single').select2({
-      placeholder: "Select a state",
+      placeholder: "Select a state",      
       //allowClear: true
+    });
+
+    $('#ki').on('change', function(e) {
+      // triggers when whole value changed
+      console.log("value changed");
+      alert(e.target.value);
+      console.log(e.target);      
     });
 
     $(this.mySelect2.current).on('change', function(){alert('***********************');});
@@ -80,18 +88,27 @@ class App extends Component {
 
         <div className="container">
           <div className="row">
-            <div className="col-sm-4">
+            <div className="col-sm-3">
               <h3>Column 1</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
             </div>
-            <div className="col-sm-4">
-              <h3>Column 2</h3>
+            <div className="col-sm-3">
+              <h3>Column 1</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
               <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
             </div>
-            <div className="col-sm-4">
-              <h3>Column 3</h3>
+            <div className="col-sm-3">
+            <h3>Plugin Chosen</h3>
+              <select  className="chosen-select" id="ki"  style={{width:'100%'}}>
+                <option value="AL">Alabama</option>
+                <option value="WY">Wyoming</option>
+                <option value="OH">Ohio</option>
+                <option value="HA">Hamilton</option>
+              </select>
+            </div>
+            <div className="col-sm-3">
+              <h3>Plugin Select2</h3>
               <select className="js-example-basic-single" name="state" ref={this.mySelect2} style={{width:'100%'}}>
                 <option value="AL">Alabama</option>
                 <option value="WY">Wyoming</option>
