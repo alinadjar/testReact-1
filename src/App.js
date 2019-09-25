@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch, Redirect, Link } from "react-router-dom";
+import Button from '@material-ui/core/Button'
 
 
 import Select2 from 'react-select2-wrapper';
@@ -78,8 +80,8 @@ class App extends Component {
 
 
   render() {
-    return (
-      <div className="App">
+    return (      
+        <div className="App">
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />        
         </header> */}
@@ -99,46 +101,46 @@ class App extends Component {
             <div className="col-sm-3">
               <h3>react-select2-wrapper</h3>
               <div>
-              <Select2
-                multiple
-                data={['bug', 'feature', 'documents', 'discussion']}
-                options={
-                  {
-                    placeholder: 'search by tags',
+                <Select2
+                  multiple
+                  data={['bug', 'feature', 'documents', 'discussion']}
+                  options={
+                    {
+                      placeholder: 'search by tags',
+                    }
                   }
-                }
-              />
+                />
               </div>
 
-              <div style={{margin:'20px 0'}}>
-              <Select2
-                data={[
-                  { text: 'bug', id: 1 },
-                  { text: 'feature', id: 2 },
-                  { text: 'documents', id: 3 },
-                  { text: 'discussion', id: 4 },
-                ]}
-                options={{
-                  placeholder: 'search by tags',
-                }}
-              />
+              <div style={{ margin: '20px 0' }}>
+                <Select2
+                  data={[
+                    { text: 'bug', id: 1 },
+                    { text: 'feature', id: 2 },
+                    { text: 'documents', id: 3 },
+                    { text: 'discussion', id: 4 },
+                  ]}
+                  options={{
+                    placeholder: 'search by tags',
+                  }}
+                />
               </div>
 
 
               <div>
-              <Select2
-                multiple
-                defaultValue={[1, 4]}
-                data={[
-                  { text: 'bug', id: 1 },
-                  { text: 'feature', id: 2 },
-                  { text: 'documents', id: 3 },
-                  { text: 'discussion', id: 4 },
-                ]}
-                options={{
-                  placeholder: 'search by tags',
-                }}
-              />
+                <Select2
+                  multiple
+                  defaultValue={[1, 4]}
+                  data={[
+                    { text: 'bug', id: 1 },
+                    { text: 'feature', id: 2 },
+                    { text: 'documents', id: 3 },
+                    { text: 'discussion', id: 4 },
+                  ]}
+                  options={{
+                    placeholder: 'search by tags',
+                  }}
+                />
               </div>
 
 
@@ -163,7 +165,24 @@ class App extends Component {
             </div>
           </div>
         </div>
-      </div>
+
+        <div className="row" style={{backgroundColor:'#F54'}}>
+          <div className="col-6" style={{margin:'0 auto'}}>
+          <Button variant="contained" color="primary" onClick={()=>{this.props.history.push('/Nice')} } >
+            go to Nice page
+          </Button>
+          <Button variant="contained" color="primary"  style={{padding:'20px'}}>
+            Click here
+          </Button>
+          </div>
+          <div className="col-6" >
+            <Link to="/Nice" style={{color:'#FFF'}}> Nice Page</Link>|
+            <Link to="/SignIn" style={{color:'#FFF'}}> SignIn</Link>|
+            <Link to="/Dash" style={{color:'#FFF'}}> DashBoard</Link>|
+            
+          </div>
+        </div>
+      </div>      
     );
   }
 }

@@ -3,13 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.4.3",
+    "@material-ui/icons": "^4.4.3",
     "bootstrap": "^4.2.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-router-dom": "^5.1.0",
     "react-scripts": "3.1.0",
-    "react-select2-wrapper": "^1.0.4-beta6"
+    "react-select2-wrapper": "^1.0.4-beta6",
+    "recharts": "^1.7.1"
   },
   "scripts": {
     "start": "react-scripts start",
