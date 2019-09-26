@@ -80,8 +80,8 @@ class App extends Component {
 
 
   render() {
-    return (      
-        <div className="App">
+    return (
+      <div className="App">
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />        
         </header> */}
@@ -166,23 +166,59 @@ class App extends Component {
           </div>
         </div>
 
-        <div className="row" style={{backgroundColor:'#F54'}}>
-          <div className="col-6" style={{margin:'0 auto'}}>
-          <Button variant="contained" color="primary" onClick={()=>{this.props.history.push('/Nice')} } >
-            go to Nice page
+
+        <h1>material-ui.com</h1>
+        <div className="row" style={{ backgroundColor: '#F54' }}>
+          <div className="col-6" style={{ margin: '0 auto' }}>
+            <Button variant="contained" color="primary" onClick={() => { this.props.history.push('/Nice') }} >
+              go to Nice page
           </Button>
-          <Button variant="contained" color="primary"  style={{padding:'20px'}}>
-            Click here
+            <Button variant="contained" color="primary" style={{ padding: '20px' }}>
+              Click here
           </Button>
           </div>
           <div className="col-6" >
-            <Link to="/Nice" style={{color:'#FFF'}}> Nice Page</Link>|
-            <Link to="/SignIn" style={{color:'#FFF'}}> SignIn</Link>|
-            <Link to="/Dash" style={{color:'#FFF'}}> DashBoard</Link>|
-            
+            <Link to="/Nice" style={{ color: '#FFF' }}> Nice Page</Link>|
+            <Link to="/SignIn" style={{ color: '#FFF' }}> SignIn</Link>|
+            <Link to="/Dash" style={{ color: '#FFF' }}> Dashboard</Link>|
+            <Link to="/Grid" style={{ color: '#FFF' }}> Grid</Link>|
+            <Link to="/Input" style={{ color: '#FFF' }}> Input</Link>|
+
           </div>
         </div>
-      </div>      
+        <h1>Versus</h1>
+        <h1>material Bootstrap</h1>
+        <h6>https://fezvrasta.github.io/bootstrap-material-design/docs/4.0/material-design/drawers/</h6>
+        <div className="row" style={{ backgroundColor: '#F54' }}>
+          <div className="col-6" style={{ margin: '0 auto' }}>
+            <Button variant="contained" color="primary" onClick={() => { this.props.history.push('/Nice') }} >
+              go to Nice page
+            </Button>
+
+            <button type="button" class="btn btn-primary btn-sm">Block level button</button>
+          </div>
+          <div className="col-6" >
+            <Link to="/NiceBootStrapy" style={{ color: '#FFF' }}> Nice Page BootStrapy</Link>|
+            <Link to="/SignInBootStrapy" style={{ color: '#FFF' }}> SignIn BootStrapy</Link>|
+          </div>
+        </div>
+        <div className="btn-group-toggle" data-toggle="buttons">
+          <label className="btn btn-secondary active">
+            <input type="checkbox" checked autocomplete="off" /> Checked
+              </label>
+        </div>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary active">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked /> Active
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option2" autocomplete="off" /> Radio
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option3" autocomplete="off" /> Radio
+          </label>
+        </div>
+      </div>
     );
   }
 }

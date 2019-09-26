@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+
+
 class NicePage extends Component {
     constructor(props) {
         super(props);

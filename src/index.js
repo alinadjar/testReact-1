@@ -13,6 +13,8 @@ import MyLayout from './MyLayout';
 import NicePage from './NicePage';
 import SignIn from './SignIn';
 import Dashboard from './Dashboard/dashboard';
+import GridPage from './GridPage';
+import Inputs from './Inputs';
 
 ReactDOM.render(
     <Router>
@@ -22,6 +24,8 @@ ReactDOM.render(
                 <Route path="/Nice" component={NicePage} />
                 <Route path="/SignIn" component={SignIn} />
                 <Route path="/Dash" component={Dashboard} />
+                <Route path="/Grid" component={GridPage} />
+                <Route path="/Input" component={Inputs} />
                 <Redirect to="/" />
             </Switch>
         </MyLayout>
