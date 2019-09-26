@@ -5,9 +5,10 @@
   "dependencies": {
     "@material-ui/core": "^4.4.3",
     "@material-ui/icons": "^4.4.3",
-    "bootstrap": "^4.2.1",
-    "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
+    "bootstrap": "^4.2.1",
+    "bootstrap-material-design": "^4.1.1",
+    "jquery": "^3.4.1",    
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.1.0",

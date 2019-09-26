@@ -198,7 +198,7 @@ class App extends Component {
             <button type="button" class="btn btn-primary btn-sm">Block level button</button>
           </div>
           <div className="col-6" >
-            <Link to="/NiceBootStrapy" style={{ color: '#FFF' }}> Nice Page BootStrapy</Link>|
+            <Link to="/NiceBSTrap" style={{ color: '#FFF' }}> Nice Page BootStrapy</Link>|
             <Link to="/SignInBootStrapy" style={{ color: '#FFF' }}> SignIn BootStrapy</Link>|
           </div>
         </div>
