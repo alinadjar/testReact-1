@@ -24,6 +24,12 @@ import GridPage from './GridPage';
 import Inputs from './Inputs';
 
 import NicePageBootStrapy from './NicePageBootStrapy';
+import adminPage from './adminPage';
+import ProtectedRoute from './Helper/protected';
+import Login from './login';
+
+
+
 
 ReactDOM.render(
     <Router>
@@ -32,9 +38,15 @@ ReactDOM.render(
                 <Route path="/" exact={true} component={App} />
                 <Route path="/Nice" component={NicePage} />
                 <Route path="/SignIn" component={SignIn} />
+                <Route path="/login" component={Login} />
                 <Route path="/Dash" component={Dashboard} />
                 <Route path="/Grid" component={GridPage} />
                 <Route path="/Input" component={Inputs} />
+
+                <ProtectedRoute path='/admin' component={adminPage} />
+
+                
+                {/* <Route path="/admin" component={adminPage} /> */}
 
                 <Route path="/NiceBSTrap" component={NicePageBootStrapy} />
                 <Redirect to="/" />
