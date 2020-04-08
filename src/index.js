@@ -9,6 +9,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 //import 'jquery/dist/jquery';
 //import 'popper.js/dist/popper.js';
 
+import { Provider } from 'react-redux';
+import dataStore from './iRedux/store';
 
 import 'bootstrap/dist/js/bootstrap.js';
 
@@ -27,32 +29,42 @@ import NicePageBootStrapy from './NicePageBootStrapy';
 import adminPage from './adminPage';
 import ProtectedRoute from './Helper/protected';
 import Login from './login';
+import Home from './home';
+import about from './about';
+import myMap from './myMap';
+import rgm1 from './reactGoogleMaps/rgm1';
 
 
 
 
 ReactDOM.render(
-    <Router>
-        <MyLayout>
-            <Switch>
-                <Route path="/" exact={true} component={App} />
-                <Route path="/Nice" component={NicePage} />
-                <Route path="/SignIn" component={SignIn} />
-                <Route path="/login" component={Login} />
-                <Route path="/Dash" component={Dashboard} />
-                <Route path="/Grid" component={GridPage} />
-                <Route path="/Input" component={Inputs} />
+    <Provider store={dataStore} >
+        <Router>
+            <MyLayout>
+                <Switch>
+                    <Route path="/" exact={true} component={App} />
+                    <Route path="/Nice" component={NicePage} />
+                    <Route path="/SignIn" component={SignIn} />
+                    <Route path="/login" component={Login} />
+                    <Route path="/Dash" component={Dashboard} />
+                    <Route path="/Grid" component={GridPage} />
+                    <Route path="/Input" component={Inputs} />
+                    <Route path="/home" component={Home} />
+                    <Route path="/about" component={about} />
+                    <Route path="/map" component={myMap} />
+                    {/* <Route path="/mapp" component={rgm1} /> */}
 
-                <ProtectedRoute path='/admin' component={adminPage} />
+                    <ProtectedRoute path='/admin' component={adminPage} />
 
-                
-                {/* <Route path="/admin" component={adminPage} /> */}
 
-                <Route path="/NiceBSTrap" component={NicePageBootStrapy} />
-                <Redirect to="/" />
-            </Switch>
-        </MyLayout>
-    </Router>
+                    {/* <Route path="/admin" component={adminPage} /> */}
+
+                    <Route path="/NiceBSTrap" component={NicePageBootStrapy} />
+                    <Redirect to="/" />
+                </Switch>
+            </MyLayout>
+        </Router>
+    </Provider>
     , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
