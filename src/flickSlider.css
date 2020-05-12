@@ -1,0 +1,81 @@
+img {
+    border-radius: 10px;    
+}
+
+.carousel div{
+    margin: 20px ;
+}
+
+
+div.carousel-cell {
+    margin: 0 10px;
+}
+
+
+
+/* ===============================================>> move page dots into carousel */
+/* .flickity-page-dots { bottom: 10px; } */
+
+
+
+/* ===============================================>> add the following code, when watchCSS property of flickity is set to true */
+
+/* 
+.carousel:after {
+    content: 'flickity';
+    display: none; /* hide :after 
+  }
+  
+  @media screen and ( min-width: 992px ) {
+     /* disable Flickity for large devices  
+    .carousel:after {
+      content: '';
+    }
+  } */
+
+
+
+  
+  @media (min-width: 576px) { 
+    .ttt {
+        width: 590px;
+    }
+    .ttt img {
+        width: 100%;
+    }
+ }
+ @media (min-width: 768px) { 
+    .ttt {
+        width: 560px;
+    }
+    .ttt img {
+        width: 100%;
+    }
+ }
+ @media (min-width: 992px) { 
+    .ttt {
+        width: 520px;
+        /* border: 5px solid red;
+        margin: 100px; */
+    }
+    .ttt img {
+        width: 100%;
+    }
+ }
+ @media (min-width: 1200px) { 
+    .ttt {
+        width: 480px;
+    }
+    .ttt img {
+        width: 100%;
+    }
+ }
+ @media (min-width: 1500px) { 
+    .ttt {
+        width: 400px;
+    }
+    .ttt img {
+        width: 100%;
+    }
+ }
+

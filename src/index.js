@@ -33,6 +33,7 @@ import Home from './home';
 import about from './about';
 import myMap from './myMap';
 import rgm1 from './reactGoogleMaps/rgm1';
+import FlickSlider from './flickSlider';
 
 
 
@@ -52,6 +53,7 @@ ReactDOM.render(
                     <Route path="/home" component={Home} />
                     <Route path="/about" component={about} />
                     <Route path="/map" component={myMap} />
+                    <Route path="/flick" component={FlickSlider} />
                     {/* <Route path="/mapp" component={rgm1} /> */}
 
                     <ProtectedRoute path='/admin' component={adminPage} />
@@ -60,7 +62,7 @@ ReactDOM.render(
                     {/* <Route path="/admin" component={adminPage} /> */}
 
                     <Route path="/NiceBSTrap" component={NicePageBootStrapy} />
-                    <Redirect to="/" />
+                    <Redirect to="/" component={App} />
                 </Switch>
             </MyLayout>
         </Router>
