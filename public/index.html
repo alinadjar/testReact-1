@@ -32,6 +32,7 @@
     
   <link href="%PUBLIC_URL%/assets/select2.css" rel="stylesheet">
   <link href="%PUBLIC_URL%/assets/chosen.min.css" rel="stylesheet">
+  <link href="%PUBLIC_URL%/assets/fonts/css/fontiran.css" rel="stylesheet" />
   <script src="%PUBLIC_URL%/assets/jquery-3.3.1.min.js"></script>
   <script src="%PUBLIC_URL%/assets/select2.js"></script>
   <script src="%PUBLIC_URL%/assets/chosen.jquery.js"></script>
@@ -46,8 +47,17 @@
   <title>React App</title>
 </head>
 
-<body>
+<body style="font-family: IRANSans, Arial, Helvetica, sans-serif;">
   <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <!-- <h2 style="font-family: 'IRANSans'; font-size: 1.5rem; ">شامپو55 صورت و بدن 6546  آبی گلرنگ</h2>
+  <h2 style="font-family: 'IRANSans'; font-size: 1.5rem; ">654654 گلرنگ</h2>
+  <h2>نمونه 654 متن</h2>
+  <h2 style="font-family: Arial, Helvetica, sans-serif;">654</h2> -->
+
+  <h2>سلام <span>55</span></h2>
+
+
   <div id="root"></div>
   <!--
       This HTML file is a template.
@@ -59,6 +69,12 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <!-- <script type="text/javascript">
+      $(document).ready(() => {
+        alert(parseInt($('h2 > span').text())*2)
+      });
+    </script> -->
 </body>
 
 </html>
